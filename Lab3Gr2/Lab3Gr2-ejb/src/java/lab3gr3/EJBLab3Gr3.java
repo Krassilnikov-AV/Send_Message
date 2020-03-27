@@ -34,7 +34,12 @@ public class EJBLab3Gr3 implements EJBLab3Gr3Local,
     @Override
     public String getMessage(String login) {
         
-        return "Тестовое сообщение";
+  //      return "Тестовое сообщение";
+      if(registered == true && countMsg<3)    {
+        countMsg++;
+        return "получена строка";
+    } 
+        else return "Зарегистрируйтесь";
     }
 
     
